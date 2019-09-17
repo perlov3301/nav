@@ -9,3 +9,6 @@
   <li><a href="mg.html">SPA with JQM: IQ test</a></li>
   <li><a href="a17var.html">JQM and plugin for Google Map:humusiot</a></li>
   <li><a href="a01/a01.html">SPA with JQM: full REST with Backbone</a></li>
+  git remote add origin https://github.com/perlov3301/navigator.git
+  git remote (we will see the world 'origin')
+  git push -u origin master
