@@ -1,0 +1,54 @@
+#id1102 ul:before
+{
+    content: attr(aria-label);
+    font-size: 120%;
+    font-weight: bold;
+    margin-left:-15px;
+
+}
+#id1102
+{
+    width:575px;
+}
+#id1013,#id1016,#id1019
+{
+    width:460px;
+    background: burlywood;
+}
+#id1201,#id1301,#id1401
+{
+    color: white;
+}
+#id1013 ul:before
+{
+    content: attr(aria-label);
+    font-size: 120%;
+    font-weight: bold;
+    margin-left:-15px;
+
+}
+#id1016 ul:before
+{
+    content: attr(aria-label);
+    font-size: 120%;
+    font-weight: bold;
+    margin-left:-15px;
+
+}
+#id1019 ul:before
+{
+    content: attr(aria-label);
+    font-size: 120%;
+    font-weight: bold;
+    margin-left:-15px;
+
+}
+form legend
+{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.starthidden
+{
+    display: none;
+}

@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+<title>I51</title>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+<script src="jquery-2.1.4.js"></script>
+<script src="jquery.mobile-1.4.5.js"></script>
+<!--
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+-->
+<script type="text/javascript" src="jsapi.js"></script>
+<script type="text/javascript" src="expense.js"></script>
+
+<style type='text/css'>
+html{width:420px;}
+body{width:420px;}
+.ui-mobile [data-role=page],
+.ui-mobile [data-role=popup],
+.ui-mobile [data-role=dialog],
+ .ui-page 
+{ 
+top: 0; 
+left: 0; 
+width: 100%; 
+min-height: 100%;
+}
+.ui-popup-container
+ {
+    width:100%;
+    height: 100%;
+ }
+.ac11 { font-weight:bold;}
+.ac12 {;}
+.ac13 {list-style-type: none;}
+.ac14 {;}
+.ac15 {;}
+.ac16 {width: 420px; height: 500px;}
+.ac17 {width: 420px; height: 250px;}
+</style>
+
+</head>
+<body>
+<div data-role="page" id="home">
+    <div data-role="header" id='ad000'>
+      html5:window.indexedDB+open+transaction+objectStore+add+delete
+    </div>
+    <div data-role="content">
+    <div id='ad001' class='ac11'>
+     <a href="#ad01" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline" data-position-to='window'
+       data-ajax='true' >browser test</a>
+  </div>
+    <div id='ad002' class='ac11'>       
+     <a href="#ad02" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af02();'>request and create Store by click</a>
+    </div>
+    <div id='ad004' class='ac11'>
+     <a href="#ad03" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af03();'>read an Item</a>
+     <a href="#ad04" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af04();'>creat divs+read all</a>
+     <a href="#ad06" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af06();'>creat ol+read all</a>
+     <a href="#ad08" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af08();'>delete item</a>
+     <a href="#ad10" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af10();'>read item</a>
+    </div>
+    <div id='ad005' class='ac11'>
+     <a href="#ad05" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af05();'>show all(read to ul)</a>    
+    </div>
+    <div id='ad006' class='ac11'>
+     <a href="#ad07" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af07();'>add item</a>
+     <a href="#ad11" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af11();'>delete item m</a>
+     <a href="#ad12" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af12();'>add cost to item</a>
+     <a href="#ad13" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af13();'>reset costs to zero</a>
+     <a href="#ad09" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  ui-btn-inline"  data-position-to='window'
+       data-ajax='true' onclick='af09();'>show pie-chart</a>
+    
+    </div>
+
+    
+<div id='ad003'>
+ <form>
+  <input type='button' value='button' id='ab11'/>
+ </form>
+</div>
+<div id="ad0031" class='ac16'></div> 
+
+
+    <div data-role="popup" id="ad01">
+         <div data-role="header"  >
+            <h2></h2>
+         </div>
+         <div data-role="main" class="ui-content">
+            <div id='ad011' class='ac11'></div>
+            <div id='ad012' class='ac11'></div>
+            <div id='ad013'><input type='button' value='butt' id='ab011'/>
+            </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' 
+             onclick='af01();'>back</a>
+          </div>     
+      </div><!--popu01-->
+
+<div data-role="popup" id="ad02">
+          <div data-role="header" >
+            <h2>last</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+
+            <div id='ad021' class='ac11'> </div>
+            <div id='ad022' class='ac11'> </div>
+            <div id='ad023'>
+              <input type='button' value='request+store' id='ab021'/>
+            </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af02();' 
+             >back</a>
+          </div>     
+      </div><!--pop02-->
+
+
+      <div data-role="popup" id="ad03">
+          <div data-role="header" id='ad030' class='ac12' >
+            <h2>header</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+
+            <div id='ad031' class='ac11'></div>
+            <div id='ad032a' class='ac11'></div>
+            <div id='ad032b' class='ac11'></div>
+            <div id='ad032c' class='ac11'></div>
+            <div id='ad033'><input type='button' value='read 12' id='ab031'/>
+           </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af03();'>back</a>  
+      </div><!--pop03-->
+      <div data-role="popup" id="ad04">
+          <div data-role="header" id='ad040' class='ac12' >
+            <h2>head</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+            <div id='ad041' class='ac11'></div>
+            <div id='ad042' class='ac11'></div>
+            <div id='ad043'><input type='button' 
+              value='create div for each and every item' id='ab041'/>
+            </div>
+          </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af04();'>back</a>
+      </div><!--pop04-->
+      <div data-role="popup" id="ad05">
+          <div data-role="header" id='ad050' class='ac12' >
+            <h2>IDB</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+            <div id='ad051' class='ac11'></div>
+            <div id='ad052a' class='ac11'></div>
+            <div id='ad052b' class='ac11'></div>
+            <div id='ad052c' class='ac11'></div>
+            <div id='ad054'  class='ac11'><ul class='ac13'></ul>
+            </div>
+            <div id='ad053'>
+              <input type='button' value='items list' id='ab051'/>
+            </div>
+          </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af05();'>back</a>
+      </div><!--pop05-->
+      <div data-role="popup" id="ad06">
+          <div data-role="header" id='ad060' class='ac12' >
+            <h2>IDB</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+            <div id='ad061' class='ac11'></div>
+            <div id='ad062' class='ac11'></div>
+            <div id='ad063'><input type='button' value='read all' id='ab061'/>
+            </div>
+          </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af06();'>back</a>
+      </div><!--pop06-->
+      <div data-role="popup" id="ad07">
+          <div data-role="header" id='ad070' class='ac12' >
+            <h2>IDB1</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+            <div id='ad071' class='ac11'></div>
+            <div id='ad072' class='ac11'></div>
+            <div id='ad074' class='ac11'> 
+              <label for='ai071' class='ac11'>
+                fill data  of item for adding</label>
+              <input type='text' name='ai071' id='ai071' placeholder='10'/>
+              <input type='text' name='ai072' id='ai072' placeholder='books'/>
+              <input type='text' name='ai073' id='ai073' placeholder='30'/>
+            </div>
+            <div id='ad073'><input type='button' value='add item' id='ab071'/>
+            </div>
+          </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af07();'>back</a>
+      </div><!--pop07-->
+      <div data-role="popup" id="ad08">
+          <div data-role="header" id='ad080' class='ac12' >
+            <h2>IDB2</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+            <div id='ad081' class='ac11'></div>
+            <div id='ad082' class='ac11'></div>
+            <div id='ad084' class='ac11'> 
+              <label for='ai081' class='ac11'>
+                fill key  of item for removing</label>
+              <input type='text' name='ai081' id='ai081' placeholder='10'/>
+            </div>
+            <div id='ad083'><input type='button' value='remove item' id='ab081'/>
+            </div>
+          </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af08();'>back</a>
+      </div><!--pop08-->
+      <div data-role="popup" id="ad09">
+          <div data-role="header" id='ad090' class='ac12' >
+            <h2>IDB3</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+            <div id='ad091' class='ac11'></div>
+            <div id='ad092' class='ac11'></div>
+            <div id="ad0922" class='ac17'></div> 
+            <div id='ad093'>
+              <input type='button' value='show chart' id='ab091'/>
+            </div>
+          </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af09();'>back</a>
+      </div><!--pop09-->
+
+      <div data-role="popup" id="ad10">
+          <div data-role="header" id='ad100' class='ac12' >
+            <h2>IDB3</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+           <div id='ad106'>
+            <div data-role='fieldcontain' class='ac11'>
+             <label for="as11" class="select">choose item:</label>
+             <select name='as11' id='as11'> 
+              <option selected='selected'>
+                choose category</option>
+             </select>
+            </div><!--fieldcontain-->
+           </div><!--ad106-->
+           <div id='ad107'>
+              <input type='button' value='read all items' id='ab102'/>
+            </div>
+            <div id='ad101' class='ac11'></div>
+            <div id='ad102' class='ac11'></div>
+            <div id='ad104' class='ac11'></div>
+            <div id='ad103'>
+              <input type='button' value='read item' id='ab101'/>
+            </div>
+          </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af10();'>back</a>
+      </div><!--pop10-->
+
+      <div data-role="popup" id="ad11">
+          <div data-role="header" id='ad110' class='ac12' >
+            <h2>id11</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+           <div id='ad116'>
+            <div data-role='fieldcontain' class='ac11'>
+             <label for="as12" class="select">choose item:</label>
+             <select name='as12' id='as12'> 
+              <option selected='selected'>
+                choose category to delete</option>
+             </select>
+            </div><!--fieldcontain-->
+           </div><!--ad116-->
+           <div id='ad117'>
+              <input type='button' value='read all items' id='ab112'/>
+            </div>
+            <div id='ad111' class='ac11'></div>
+            <div id='ad112' class='ac11'></div>
+            <div id='ad114' class='ac11'></div>
+            <div id='ad115' class='ac11'></div>
+            
+            <div id='ad113'>
+              <input type='button' value='delete item' id='ab111'/>
+            </div>
+          </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af11();'>back</a>
+      </div><!--pop11-->
+      <div data-role="popup" id="ad12">
+          <div data-role="header" id='ad120' class='ac12' >
+            <h2>ad12</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+           <div id='ad126'>
+            <div data-role='fieldcontain' class='ac11'>
+             <label for="as13" class="select">choose item:</label>
+             <select name='as13' id='as13'> 
+              <option selected='selected'>
+                choose category for cost adding</option>
+             </select>
+            </div><!--fieldcontain-->
+            <form name='afrm12'>
+             <input type='number' name='ai121' id='ai121' required
+                placeholder='feel cost to add'/>           
+            </form>
+           </div><!--ad126-->
+           <div id='ad127'>
+              <input type='button' value='items list' id='ab122'/>
+            </div>
+            <div id='ad121' class='ac11'></div>
+            <div id='ad122' class='ac11'></div>
+            <div id='ad124' class='ac11'></div>
+            <div id='ad125' class='ac11'></div>
+          
+            <div id='ad123'>
+              <input type='button' value='add cost' id='ab121'/>
+            </div>
+          </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af12();'>back</a>
+      </div><!--pop12-->
+      <div data-role="popup" id="ad13">
+          <div data-role="header" id='ad130' class='ac12' >
+            <h2>ad13</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+                  
+            <div id='ad131' class='ac11'></div>
+            <div id='ad132' class='ac11'></div>
+      
+            <div id='ad133'>
+              <input type='button' value='reset costs' id='ab131'/>
+            </div>
+          </div>
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' onclick='af13();'>back</a>
+      </div><!--pop12-->
+
+
+<p></p>
+   </div><!--cont-->
+</div><!--home-->
+
+</body>
+</html>

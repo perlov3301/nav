@@ -1,0 +1,12 @@
+{
+ "name": "lotto extension",
+ "version": "1.0",
+ "manifest_version": 2,
+ "description": "This ext will generating lotto numbers", 
+ "browser_action":
+   {
+    "icons": ["aic19a.png"],
+    "default_icon": "aic19a.png",
+    "default_popup": "lottoextn.html"
+   }
+}

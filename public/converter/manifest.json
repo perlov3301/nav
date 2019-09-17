@@ -1,0 +1,12 @@
+﻿{
+ "name": "convertor extension",
+ "version": "1.0",
+ "manifest_version": 2,
+ "description": "This ext will generate popup with converter", 
+ "browser_action":
+   {
+    "icons": ["aic19c.png"],
+    "default_icon": "aic19c.png",
+    "default_popup": "converext.html"
+   }
+}

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+   <head>
+<title>jQM gm21</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="content-language" content="en" />
+<meta name="author" content="Johan Säll Larsson" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+
+<link type="text/css" rel="stylesheet" href="jquery.mobile.css" />
+
+<link type="text/css" rel="stylesheet" href="mobile.css" />
+
+<script type="text/javascript" 
+ src="http://maps.google.com/maps/api/js?sensor=false&libraries=places">
+</script> 
+
+<script type="text/javascript" src="jquery.min.js"> </script>
+
+<script type="text/javascript" src="jquery.mobile.min.js">
+</script>
+<!--
+-->
+
+<script type="text/javascript" src="demo.js"></script>
+
+<script type="text/javascript" src="jquery.ui.map.js">
+</script>
+<script type="text/javascript" src="jquery.ui.map.services.js">
+</script>
+<script type="text/javascript" src="jquery.ui.map.extensions.js">
+</script>
+<script src="pouchdb-3.6.0.js"></script>
+
+<style type="text/css">
+.ac11{font-weight:bold;}
+.ac12{width:150px;height:150px;} 
+.ac13 {;}
+ </style>
+
+<script type="text/javascript">
+
+var db = new PouchDB('a12');
+var a00='32.082947,34.77377';
+var a01='32.09503,34.778';
+var a02='32.08524,34.7745';
+var am1=new Array();
+var am1a=new Array();
+var ilng=3;
+//var ilng;
+
+ am1[0]={'center':a00,'title':'humus kiki'};
+ am1[1]={'center':a01,'title':'humus ashkara'};
+ am1[2]={'center':a02,'title':'humus disengoff'};
+
+db.allDocs({include_docs:true,descending:true},
+function(err,doc)
+     {
+                 
+        ilng=ilng+doc.rows.length;
+   console.log('ilng='+ilng);
+ 
+        for(var i8=3; i8<ilng; i8++)
+     
+       {
+   
+   console.log('i8='+i8+' id:'+doc.rows[i8-3].doc._id);
+                  
+am1[i8]={'title':doc.rows[i8-3].doc._id,
+        'center':doc.rows[i8-3].doc.cen};   
+console.log('title:'+am1[i8].title+' center:'+am1[i8].center);
+       }
+                        
+     });
+    
+	
+			////////////////////////////////////////////////////////////
+ 
+ var adb=new Array();
+ var adb1=new Array();
+ var adc=new Array();
+ var adc1=new Array(); 
+ var a199=new Array();
+ var a198=new Array();
+ var a197=new Array();
+ var a1980=new Array();
+ var a1990=new Array();
+ 
+
+$(document).ready(function()  {$('#ad001').hide();});
+
+$(document).ready(function() 
+ {
+  
+    
+;});//fnc ready
+
+$(document).ready(function()
+ {
+   $('#ab001').bind('click',function()
+     {
+       $('#ad002').hide();
+       $('#ad001').show();
+
+    var adivp=[];
+    var adiv=[];
+console.log('creating:ilng='+ilng);
+  for(var i11=0;i11<ilng;i11++)
+   {
+     a1980[i11]='canvas'+i11;
+     a198[i11]='#canvas'+i11;
+     a1990[i11]='basic'+i11;
+     a199[i11]='#basic'+i11;
+console.log('id='+a1990[i11]+' '+a199[i11]);
+
+    var adstr=new Array();
+    var a1=new Array();
+    var ai1=new Array();
+     ai1[i11]=i11.toString();
+    
+     adstr[i11]="<div data-role=page data-url=yay id='basic"+ai1[i11]+"'>";
+       adstr[i11]+="<div data-role=header><h3>jqm</h3>";
+       adstr[i11]+="<a data-rel='back'>Back</a></div>";    
+     adstr[i11]+="<div data-role=content>";
+     adstr[i11]+="<div class='ui-bar-c ui-corner-all ui-shadow' style='padding:1em;'>";
+     adstr[i11]+="<div id='canvas"+ai1[i11]+"' style='height:350px;'>hi world</div>";
+     adstr[i11]+="</div></div></div>";
+     adivp[i11] = $(adstr[i11]); 
+     adivp[i11].appendTo('#abody');
+     adivp[i11].page();
+console.log('i11='+i11+' title:'+am1[i11].title);
+     var note = document.querySelector("ul");
+       a1[i11]="<a href='"+a199[i11]+"'";
+       a1[i11]+="onclick='f99("+i11+");'";
+       a1[i11]+=">"+am1[i11].title+"</a>";
+       note.innerHTML += '<li>'+a1[i11]+'</li>'; 
+             $('#aul').listview('refresh');
+ 
+     console.log(" i11=" + i11+' '+am1[i11].title);
+  ;}//for
+
+    ;});//bind
+;});//ready
+
+$(document).ready(function()
+ {
+   $('').bind('click',function(){ ;});//bind
+;});//ready
+
+function f99(i1)
+ {
+  adb[i1]='basic'+i1;
+  adb1[i1]='#'+adb[i1];
+  adc[i1]='canvas'+i1;
+  adc1[i1]='#'+adc[i1];
+ 
+      demo.add(adb[i1], function()
+       {
+         $(adc1[i1]).gmap(
+          {
+           'center': am1[i1].center, 
+           'zoom': 19, 
+           'disableDefaultUI':true,  
+           'callback': function()
+             {
+	      var self = this;
+        self.addMarker({'position':this.get('map').getCenter()})
+                 .mouseover(function() 
+           {self.openInfoWindow({'content':am1[i1].title}, this);});
+             }//calback
+          }); //.gmap
+       }).load(adb[i1]);//.add
+    
+  $(adb1[i1]).live('pageshow',function()
+    {
+      demo.add(adb[i1], function()
+        { $(adc1[i1]).gmap('refresh'); }).load(adb[i1]);
+    });//.live
+;};//fnc
+
+ </script>
+
+<script type="text/javascript">
+ 
+            
+  function aadd()
+   {
+  
+    var a_id = window.document.bookform.ai071.value;
+        
+    var acen = window.document.bookform.ai072.value;
+ 
+   
+    var book = 
+      {
+           
+       _id: a_id,
+        
+        cen: acen,
+  
+      
+      };
+       
+    db.put(book, function callback(error, result)
+      {
+     
+        if (!error) 
+          {
+           
+            clearFields();
+
+            $('#message').html(
+"the new item was added");
+    
+          }
+         
+      });
+      
+   }
+ ;     
+ function clearFields() 
+   {
+               
+     $('#ai071').val("");
+  
+     $('#ai072').val("");
+     $('#message').html('');     
+   }
+;       
+ function ashow()
+   {
+         
+     db.allDocs({include_docs:true,descending:true},
+function(err,doc)
+      {
+                 
+        showTableOfBooks(doc.rows);
+                       
+      });
+        
+   }
+        
+ function showTableOfBooks(data)
+   {
+                
+     var str = "<ul class='ac14'>";
+          
+     for(var i=0; i<data.length; i++)
+     
+       {
+     
+         str+="<li>"+data[i].doc._id+' '+data[i].doc.cen+"</li>";
+         
+         
+       }
+         
+      str += "</ul>";
+  
+      $('#message').html(str);
+      
+  }
+; 
+ 
+$(document).ready(function()
+ {
+   $('#ab071').bind('click',function()
+     {
+       $('#ad073').hide();
+      var a1=$('#ai071').val();
+       $('#ad072').html(a1);
+    ;});//ready
+;});
+function af07()
+ {
+  $('#ad071').html('');
+  $('#ad072').html('');
+  $('#ad073').show();
+  $('#ai071').val('');
+;};
+
+function af15()
+ { 
+  window.location.reload();
+;};
+
+
+</script>
+
+</head>
+<body id='abody'>
+     <div id="home" data-role="page">
+       <div data-role="header">
+	 <h1><a data-ajax="false" href="/">
+             jQM Google maps <span id="version"></span>
+             </a></h1>
+       </div>
+       <div data-role="content">
+         <div id='ad002'>
+           <button class="ui-btn ui-corner-all" id='ab001'>
+             click for load defult set</button>
+         </div>
+         <div id='ad001'>			
+	   <h3>default set of humusiot</h3>
+	   <ul data-role="listview" 
+               data-inset="true" data-theme="c" 
+               data-dividertheme="a" id='aul'> 
+
+	     <li><a href="#ad07"  onclick='af07();'>
+                 add humusia and reload this page</a></li>
+	   </ul> 
+         </div><!--ad001-->
+	</div><!--content-->
+	<div data-role="footer" data-theme="a">
+	  Author: <span itemprop="name">Johan S&auml;ll Larsson</span> 
+           (<a href="http://johansalllarsson.se"                               itemprop="url">http://johansalllarsson.se</a>) 
+          &copy;alex perlov<a href='http://www.hit.ac.il/en'>
+          course html5 for android</a></div><!--foot-->	
+    </div><!--home-->
+	
+           <div id="ad07" data-role="page">
+	   <div data-role="header">
+	     <h3><a data-ajax="false" href="/">pouchdb</a></h3>
+		 <a data-rel="back" onclick='af15();'>Back</a>
+	   </div>
+	   <div data-role="content">	
+	     
+             <form name="bookform">
+  
+         _id <input type="text" name="ai071" id='ai071'
+                  placeholder='name of humusia'/>
+     
+               <br/>
+     
+         center<input type="text" name="ai072" id='ai072'
+placeholder='two numbers with psik between(e.g. 12.34,56.78)'/>
+    
+    <br/>
+     
+     
+   <input type="button" value="add humusia" onClick="aadd();" />
+    
+    <br/>
+     
+ <input type="button" value="clear fields" onClick="clearFields()"/>
+ 
+   <br/>
+     
+   <input type="button" value="show all" onClick="ashow();" />
+   
+ </form>
+   
+ <div id="message" class='ac11'></div>
+
+	    </div><!--content-->
+	  </div><!--page07-->
+
+		
+	 
+<p>localhost/0622a/.html</p>		
+  </body>
+</html>

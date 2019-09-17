@@ -1,0 +1,21 @@
+[
+  {"id":101 , "name": "Jan Gillan" ,"nationality": "Great Bretain" ,
+    "songs":[{"name1":"Smoke on the water","youtube":"http"},
+      {"name1":"Smoke on the water","youtube":"http"},
+      {"name1":"Smoke on the water","youtube":"http"}
+    ]
+  },
+  {"id":102 , "name": "Paul MacCartny" ,"nationality": "Great Bretain" ,
+    "songs":[{"name1":"Michel","youtube":"http"},
+      {"name1":"Let it be","youtube":"http"},
+      {"name1":"a come the sun","youtube":"http"}
+    ]
+  },
+  {"id":103 , "name": "Carouso" ,"nationality": "Italian" ,
+    "songs":[{"name1":"Smoke on the water","youtube":"http"},
+      {"name1":"Smoke on the water","youtube":"http"},
+      {"name1":"Smoke on the water","youtube":"http"}
+    ]
+  }
+
+]

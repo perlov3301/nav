@@ -1,0 +1,5 @@
+[
+  { "id": 123 ,"balance": 1000 ,"credit":200,"interest":3},
+  { "id": 124 ,"balance": 2000 ,"credit":400,"interest":2.2},
+  { "id": 125 ,"balance": 4000 ,"credit":800,"interest":1.6}
+]

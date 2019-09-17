@@ -1,0 +1,19 @@
+﻿{
+ "name": "expenses0",
+ "version": "1.0",
+ "manifest_version": 2,
+ "description": "This extention shows your expenses", 
+ "browser_action":
+   {
+    "icons": ["aic19l.png"],
+    "default_icon": "aic19l.png",
+    "default_popup": "aexh.html"
+   },
+  "permissions":
+    [
+      "https://google.com/jsapi",
+      "https://google.com/*",
+      "https://*/*",
+      "http://*/*"
+    ]
+}

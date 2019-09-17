@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<title>a62</title>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+<script src="jquery-2.1.4.min.js"></script>
+<script src="jquery.mobile-1.4.5.min.js"></script>
+<script src="couponsext.js"></script>
+
+<style type='text/css'>
+html{width:450px;}
+.ui-mobile [data-role=page],
+.ui-mobile [data-role=popup],
+.ui-mobile [data-role=dialog],
+ .ui-page 
+{ 
+top: 0; 
+left: 0; 
+width: 100%; 
+min-height: 100%;
+}
+label { float:left;display: inline-block; }
+.ac112 
+ {
+    float:left;
+ }
+
+ .ac113
+{  
+  display:inline !important;;
+}
+.ac114 
+  {
+    width:26%;
+    margin-right: 50%;
+    padding-right: 5%;
+  }
+.ac115{float:right;}
+.ac116{position:absolute;}
+.ac117{position:relative;}
+.ac118
+ {
+  width:85%;
+  margin-right: 5%;
+;}
+.ac11 { font-weight:bold;}
+.ui-popup-container
+ {
+    width:100%;
+    height: 100%;
+ }
+
+</style>
+</head>
+
+<body>
+  <div data-role="page" id="home">
+    <div data-role="header" data-theme="a">
+     <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' id='aa091'>back
+            </a>
+      <h1>coupons also in extension</h1>
+    </div> <!--header-->   
+    <div data-role="content">
+     <div id='ad001'></div>
+     
+ <!--ui-btn-inline -->      
+       <a href="#ad07" data-rel="popup"  data-transition="slide" 
+         class="ui-btn  "  data-position-to='window'
+         data-ajax='true' id='aa007'>
+            set banners show  of project page
+       </a>
+       <div id='ad006' class='ac11'>
+     <a href="#ad08" data-rel="popup"  data-transition="slide" 
+       class="ui-btn  "  data-position-to='window'
+       data-ajax='true' id='aa008'> our coupons</a>
+    </div>
+          
+      <div data-role="popup" id="ad07">
+          <div data-role="header" >
+            <h2>set page</h2>
+            <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' >
+              back</a>
+          </div>
+          <div data-role="main" class="ui-content">
+            <div id='ad071' class='ac11'></div>
+              <label for='ai071' class='ac11'>number of baners on the page</label>
+              <input type='number' name='ai071' id='ai071' 
+                   min='1' max='10' step='1' placeholder='less then 10'
+                   style='font-weight:bold'/>
+            <div id='ad073'><input type='submit' value='submit' id='ab071'/>
+            </div>
+            <div id='ad072' class='ac11'></div>
+          </div><!--main-->         
+      </div><!--pop07-->
+
+      <div data-role="popup" id="ad08">
+          <div data-role="header"  class='ac12' >
+           <a  class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' 
+             id='aa082'>back</a>
+            <h3>Accordieon</h3>
+          </div>
+          <div data-role="main" class="ui-content">
+           <div id='ad081' class='ac11'></div>
+           <div data-role='collapsibleset'  id='ad082'>
+           </div>
+           <div id='ad083' class="ui-grid-a">
+             <div class="ui-block-a">
+              <a href="" data-role='button' data-inline="true"
+                data-icon='arrow-l' data-iconpos='left'
+                 id='ab0812'>previous
+              <a/>
+             </div>
+             <div class="ui-block-b">
+              <a href="" data-role='button' data-inline="true"
+                data-icon='arrow-r' data-iconpos='right'
+                 id='ab0811'>next
+              <a/>
+             </div>
+            </div>
+          </div><!--main-->
+          
+      </div><!--pop08-->
+
+    </div><!--cont home-->
+  </div><!--home-->
+
+<p>localhost/07pro/coupons ol ext/couponsext.html</p>
+</body>
+</html>

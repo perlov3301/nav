@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<title>a62</title>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+<script src="jquery-2.1.4.min.js"></script>
+<script src="jquery.mobile-1.4.5.min.js"></script>
+<script src="modernizr.js"></script>
+<script src="lottoexj.js"></script>
+
+<style type='text/css'>
+html,body{width:620px;}
+.ui-mobile [data-role=page],
+.ui-mobile [data-role=popup],
+.ui-mobile [data-role=dialog],
+ .ui-page 
+{ 
+top: 0; 
+left: 0; 
+width: 100%; 
+min-height: 100%;
+}
+.ui-popup-container
+ {
+    width:100%;
+    height: 260%;
+ }
+
+.aclb { float:left;display: inline-block; }
+.ac112 {float:left;}
+.ac113 {display:inline !important;;}
+.ac114 
+  {
+    width:26%;
+    margin-right: 50%;
+    padding-right: 5%;
+  }
+.ac115{float:right;}
+#ad064 {
+    background: none;
+    padding: 1px 1px 1px  1px;
+    width: 40%;
+    margin: 0 auto;
+    border: none;
+    float:left;
+}
+#ad064 div {
+    overflow: hidden;
+}
+
+#ad064 label {
+    font-weight: bold;
+    background: none;
+    padding:10px 1px 1px 1px;
+    color: black;
+    border: none;
+    border-right: 0;  
+    line-height: 31px;
+    width: 0%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    white-space:nowrap;
+}
+#ad064 input {
+    width: 31%;
+    padding: 4px;
+     border: 2px solid #d4d4d4;
+    border-bottom-right-radius: 2em;
+    border-top-right-radius: 2em;
+    line-height: 18px;
+    float: right;
+    margin-right: 3px;
+    box-shadow: inset 0px 2px 2px #ececec;
+}
+#ad064 input:focus {
+    outline: 0;
+}
+.ac116{position:absolute;}
+.ac117{position:relative;}
+.ac118
+ {
+  width:65%;
+  margin-left:26%;
+;}
+.ac11 { font-weight:bold;}
+.ui-btn-corner-all {
+    -moz-border-radius:             2.6em;
+    -webkit-border-radius:          2.6em;
+    border-radius:                  2.6em;
+}
+
+</style>
+
+</head>
+<body>
+  <div data-role="page" id="home">
+    <div data-role="header" data-theme="a">
+      <h1>JQM & Local storage:lotto</h1>
+    </div> <!--header-->   
+    <div data-role="content">
+     <div id='ad001'></div>
+     <a href="#ad04" id='aa004' data-rel="popup"  data-transition="slide" 
+       data-role='button' data-inline='true'  data-position-to='window'
+       data-ajax='true'  class='ui-btn ui-btn-corner-all ui-btn-inline ui-btn-a'>
+        setting page</a>
+     <a href="#ad06" id='aa006' data-rel="popup"  data-transition="slide" 
+       data-role='button'  data-inline='true' data-position-to='window'
+       data-ajax='true'  class='ui-btn ui-btn-corner-all ui-btn-inline ui-btn-a'>
+        generation</a>
+    </br>
+    <div id='ad002'>
+       
+     </div><!--hide-->
+      
+      <div data-role="popup" id="ad04">
+          <div data-role="header">
+            <h2>setting </h2>
+            <a id='aa041' class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' data-role='button'>
+             back</a>
+            
+          </div>
+          <div data-role="main" class="ui-content">
+            <div id='ad041' class='ac11'></div>
+            <div id='ad042' class='ac11'></div>
+            <form name="b4">
+             <label for='ai041' class='aclb'>how many numbers: 
+             </label>
+             <input type="number" name="ai041" id='ai041'
+                 style='font-weight:bold;' 
+                 placeholder=' number less then 14 ' 
+                 onfocus="a401(this)" onfocusout="a402(this)" 
+                 min='1' max='14' required/>
+              <label for='ai042' class='aclb'>their range:from 1 to: 
+              </label>
+              <input type="number" name="ai042" id='ai042'
+                 style='font-weight:bold;' 
+                 placeholder='number great than 10' 
+                 onfocus="a401(this)"  onfocusout="a402(this)" 
+                 min='10' required/>
+              <br/>
+              <div id='ad043'>
+               <input type='submit' value=' submit' id='ab041' />
+              </div> 
+            </form>
+
+          </div><!--main-->          
+      </div><!--pop04-->
+      
+      <div data-role="popup" id="ad06">
+          <div data-role="header"   >
+            <h2>generation</h2>
+            <a id='aa061' class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' data-role='button'>
+             back</a>      
+          </div><!--header-->
+          <div data-role="main" class="ui-content">
+           <div id='ad061' class='ac11'></div>
+           <div id='ad062' class='ac11'></div>
+           <div id='ad063' class='ac118' >
+              <div class="ui-body ui-body-b">for generation click the button
+            <!--   <input type='button' value='click here'id='ab061'/> -->
+                <a id='ab061'  data-role="button" data-theme="b" data-icon="arrow-r"
+                data-inline="true">Button  </a>
+             </div>
+           </div>
+         
+           <div id='ad064'> </div><!--ad064--> 
+          </div><!--main-->          
+      </div><!--pop06-->
+
+    </div><!--cont home-->
+  </div><!--home-->
+
+<p>localhost</p>
+<p>localhost</p>
+<p>localhost</p>
+<p>localhost</p>
+</body>
+</html>

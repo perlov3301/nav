@@ -1,0 +1,97 @@
+@media screen and (min-width: 53em) {
+  div.ascroll
+ {
+  background-color:yellow;
+  float:right;
+  width:22em;
+  height:auto;
+  border: 0;
+  border-radius: 1em;
+  padding: 1em;
+  /*overflow:auto;*/
+;}
+}
+@media screen and (min-width: 62em) {
+  div.ascroll
+ {
+  background-color:yellow;
+  float:right;
+  width:22em;
+  height:auto;
+  border: 0;
+  border-radius: 1em;
+  margin-right: 5em;
+  padding: 1em;
+  /*overflow:auto;*/
+;}
+}
+@media screen and (min-width: 66em) {
+  div.ascroll
+ {
+  background-color:yellow;
+  float:right;
+  width:26em;
+  height:auto;
+  border: 0;
+  border-radius: 1em;
+  margin-right: 10em;
+  padding: 1em;
+  /*overflow:auto;*/
+;}
+}
+@media screen and (min-width: 74em) {
+  div.ascroll
+ {
+  background-color:yellow;
+  float:right;
+  width:26em;
+  height:auto;
+  border: 0;
+  border-radius: 1em;
+  margin-right: 15em;
+  padding: 1em;
+  /*overflow:auto;*/
+;}
+}
+.navigation
+{
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ width: 26em;
+}
+.navigation li
+{
+ border: 1px solid rgb(188,188,188);
+ margin: 0.1em;
+ /*height: 3em;*/
+}
+
+.navigation>li>a:link, .navigation>li>a:visited
+{
+ font-family: fantasy;
+ background-color: rgb(22,22,22);
+ color: rgb(242,242,242);
+ padding: 0.5em;
+ display: block;
+ text-decoration: none;
+ border: 0;
+ border-radius: 0.3em;
+}
+.navigation>li>a:hover
+{
+ background-color: rgb(122,132,154);
+ color: rgb(255,255,255);
+ padding: 0.5em;
+ display: block;
+}
+div.ascroll
+ {
+  background-color: yellow;
+  width: 22em;
+  height: auto;
+  overflow: auto;
+  border: 0;
+  border-radius: 1em;
+  padding: 1em;
+;}

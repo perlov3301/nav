@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>jQM ah1</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="content-language" content="en" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<!--
+<script type="text/javascript" src="jsapi.js"></script>
+-->
+<script type="text/javascript" 
+   src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript" src="log4javascript_lite.js">
+</script>
+<link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+<script src="jquery-2.1.4.js"></script>
+<script src="jquery.mobile-1.4.5.js"></script>
+
+
+<script src="aexj.js"></script>
+<style type="text/css">
+html,body{width:620px;}
+.ui-mobile [data-role=page],
+.ui-mobile [data-role=popup],
+.ui-mobile [data-role=dialog],
+ .ui-page 
+{ 
+top: 0; 
+left: 0; 
+width: 100%; 
+min-height: 100%;
+}
+.ui-popup-container
+ {
+    width:100%;
+    height: 100%;
+ }
+
+ .ui-icon-plus, .ui-icon-minus, .ui-icon-delete, .ui-icon-arrow-r,
+    .ui-icon-arrow-l, .ui-icon-arrow-u, .ui-icon-arrow-d, .ui-icon-check,
+    .ui-icon-gear, .ui-icon-refresh, .ui-icon-forward, .ui-icon-back,
+    .ui-icon-grid, .ui-icon-star, .ui-icon-alert, .ui-icon-info, .ui-icon-home, .ui-icon-bars, .ui-icon-edit,
+    .ui-icon-search, .ui-icon-searchfield:after, 
+    .ui-icon-checkbox-off, .ui-icon-checkbox-on, 
+    .ui-icon-radio-off, .ui-icon-radio-on
+    {
+        background-image: url(images/icons-36-white.png);
+        -moz-background-size: 864px 18px;
+        -o-background-size: 864px 18px;
+        -webkit-background-size: 864px 18px;
+        background-size: 864px 18px;
+    }
+    .ui-icon-alt .ui-icon
+    {
+        background-image: url(images/icons-36-black.png);
+    }
+    .ui-icon-plus
+    {
+        background-position:    0 50%;
+    }
+    .ui-icon-minus
+    {
+        background-position:    -36px 50%;
+    }
+    .ui-icon-delete
+    {
+        background-position:    -72px 50%;
+    }
+    .ui-icon-arrow-r
+    {
+        background-position:    -108px 50%;
+    }
+    .ui-icon-arrow-l
+    {
+        background-position:    -144px 50%;
+    }
+    .ui-icon-arrow-u
+    {
+        background-position:    -179px 50%;
+    }
+    .ui-icon-arrow-d
+    {
+        background-position:    -215px 50%;
+    }
+    .ui-icon-check
+    {
+        background-position:    -252px 50%;
+    }
+    .ui-icon-gear
+    {
+        background-position:    -287px 50%;
+    }
+    .ui-icon-refresh
+    {
+        background-position:    -323px 50%;
+    }
+    .ui-icon-forward
+    {
+        background-position:    -360px 50%;
+    }
+    .ui-icon-back
+    {
+        background-position:    -395px 50%;
+    }
+    .ui-icon-grid
+    {
+        background-position:    -431px 50%;
+    }
+    .ui-icon-star
+    {
+        background-position:    -467px 50%;
+    }
+    .ui-icon-alert
+    {
+        background-position:    -503px 50%;
+    }
+    .ui-icon-info
+    {
+        background-position:    -538px 50%;
+    }
+    .ui-icon-home
+    {
+        background-position:    -575px 50%;
+    }
+    .ui-icon-search,
+    .ui-icon-searchfield:after
+    {
+        background-position:    -611px 50%;
+    }
+    .ui-icon-checkbox-on 
+    {
+        background-position:    -647px 50%;
+    }
+    .ui-icon-checkbox-off
+    {
+        background-position:    -683px 50%;
+    }
+    .ui-icon-radio-on
+    {
+        background-position:    -718px 50%;
+    }
+    .ui-icon-radio-off
+    {
+        background-position:    -754px 50%;
+    }
+    .ui-icon-bars
+    {
+        background-position:    -788px 50%;
+
+    }
+    .ui-icon-edit
+    {
+        background-position:    -824px 50%;
+    }
+
+
+.ac11 { font-weight:bold;}
+.ac12 {;}
+.ac13 {list-style-type: none;}
+.ac14 {;}
+.ac15 {;}
+.ac16 {width: 420px; height: 500px;}
+.ac17 {width: 420px; height: 250px;}
+
+[data-theme=b].ui-btn-corner-all {
+    -moz-border-radius:             2.6em;
+    -webkit-border-radius:          2.6em;
+    border-radius:                  2.6em;
+}
+ </style>
+
+
+</head>
+<body>
+    <div id="home" data-role="page">
+      <div data-role="header">
+<!--
+         <h1><a data-ajax="false" href="/" data-role='button'>
+              jQM & Indexed db & google pie-chart 
+             </a></h1>
+-->
+        <h1> jQM & Indexed db & google Pie-Chart:expenses </h1>
+      </div><!--he-->
+      <div data-role="content">					
+          <h3>mobile first SPA(try it on mobile)</h3>
+         <div  data-role='button'
+            class="ui-btn ui-input-btn ui-shadow" id='ad023'>
+            open your data Base
+           <input type="button" id='ab021' data-corners="false" 
+             data-enhanced="true" value="open your data Base">
+           </input>
+         </div>
+         <div id='adul'>
+             <ul data-role="listview"   data-inset="true" data-theme="c" 
+                    data-dividertheme="a"> 
+              <li>
+                   <a data-role='button'
+                      href="#ad05" data-rel="popup"  data-transition="slide" 
+                      data-position-to='window' data-ajax='true' 
+                      id='aa005'>the list of expenses</a>
+              </li>
+              <li>
+                   <a data-role='button'
+                      href="#ad07" data-rel="popup"  data-transition="slide" 
+                      data-position-to='window' data-ajax='true'
+                      id='aa007'>add item to the list</a>
+              </li>
+              <li>
+                   <a data-role='button'
+                      href="#ad11" data-rel="popup"  data-transition="slide" 
+                      data-position-to='window' data-ajax='true'
+                      id='aa0011'>delete item from the list</a>
+              </li>
+              <li>
+                   <a data-role='button'
+                      href="#ad12" data-rel="popup"  data-transition="slide" 
+                      data-position-to='window' data-ajax='true'
+                      id='aa0012'>add cost to an item</a>
+              </li>
+              <li>
+                   <a data-role='button'
+                      href="#ad13" data-rel="popup"  data-transition="slide" 
+                      data-position-to='window' data-ajax='true'
+                      id='aa0013'>reset all costs to zero</a>
+              </li>
+              <li>
+                   <a data-role='button'
+                      href="#ad09" data-rel="popup"  data-transition="slide" 
+                      data-position-to='window' data-ajax='true'
+                      id='aa009'> pie-chart for analysis of expenses</a>
+              </li>
+           </ul>
+         </div>
+
+       <div id="ad0031" class='ac16'></div>
+
+       <div data-role="popup" id="ad05">
+          <div data-role="header" id='ad050' class='ac12' >
+            <h2>list ad05</h2>
+            <a data-rel="back" id='aa052' data-role='button'>Back</a>
+          </div><!--he-->
+          <div data-role="main" class="ui-content">
+            <div id='ad051' class='ac11'></div>
+            <div id='ad052a' class='ac11'></div>
+            <div id='ad052b' class='ac11'></div>
+            <div id='ad052c' class='ac11'></div>
+            <div id='ad054'  class='ac11'><ul class='ac13'></ul>
+            </div>
+            <div id='ad053'>
+              <input type='button' value='items list' id='ab051'/>
+            </div>
+          </div>
+          <a data-role='button'
+             href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' id='aa051'>back</a>
+       </div><!--pop05-->
+
+       <div data-role="popup" id="ad07">
+          <div data-role="header" id='ad070' class='ac12' >
+            <h2>IDB1 ad07</h2>
+            <a data-rel="back" id='aa072' data-role='button'>Back</a>
+          </div>
+          <div data-role="main" class="ui-content">
+            <div id='ad071' class='ac11'></div>
+            <div id='ad072' class='ac11'></div>
+            <div id='ad074' class='ac11'> 
+              <label for='ai071' class='ac11'>
+                fill data  of item for adding</label>
+              <input type='text' name='ai071' id='ai071' placeholder='10'/>
+              <input type='text' name='ai072' id='ai072' placeholder='books'/>
+              <input type='text' name='ai073' id='ai073' placeholder='300'/>
+            </div>
+            <div id='ad073'><input type='button' value='add item' id='ab071'/>
+            </div>
+          </div>
+          <a data-role='button'
+             href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' id='aa071'>back</a>
+      </div><!--pop07-->
+
+      <div data-role="popup" id="ad09">
+          <div data-role="header" id='ad090' class='ac12' >
+            <h2>IDB3</h2>
+            <a data-rel="back" id='aa092' data-role='button'>Back</a>
+          </div>
+          <div data-role="main" class="ui-content">
+            <div id='ad0931'>
+              <!--<input type='button' value='show chart' id='ab0911'/>-->
+            </div>
+            <div id='ad091' class='ac11'></div>
+            <div id='ad092' class='ac11'></div>
+            <div id="ad0922" class='ac17'></div> 
+            <div id='ad093'>
+              <input type='button' value='show chart' id='ab091'/>
+            </div>
+          </div><!--co-->
+          <a data-role='button'
+             href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' id='aa091'>back</a>
+      </div><!--pop09-->
+      <div data-role="popup" id="ad11">
+         <div data-role="header" id='ad110' class='ac12' >
+            <h2>id11</h2>
+             <a data-rel="back" id='aa112' data-role='button'>Back</a>
+         </div>
+         <div data-role="main" class="ui-content">
+           <div id='ad116'>
+            <div data-role='fieldcontain' class='ac11'>
+             <label for="as12" class="select">choose item:</label>
+             <select name='as12' id='as12'> 
+              <option selected='selected'>
+                choose category to delete</option>
+             </select>
+            </div><!--fieldcontain-->
+           </div><!--ad116-->
+           <div id='ad117'>
+              <input type='button' value='read all items' id='ab112'/>
+            </div>
+            <div id='ad111' class='ac11'></div>
+            <div id='ad112' class='ac11'></div>
+            <div id='ad114' class='ac11'></div>
+            <div id='ad115' class='ac11'></div>
+            
+            <div id='ad113'>
+              <input type='button' value='delete item' id='ab111'/>
+            </div>
+        </div><!--co-->
+          <a data-role='button'
+             href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' id='aa111'>back</a>
+      </div><!--pop11-->
+      <div data-role="popup" id="ad12">
+         <div data-role="header" id='ad120' class='ac12' >
+            <h2>ad12</h2>
+              <a data-rel='back' id='aa122' data-role='button'>back</a>
+         </div>
+         <div data-role="main" class="ui-content">
+           <div id='ad126'>
+            <div data-role='fieldcontain' class='ac11'>
+             <label for="as13" class="select">choose item:</label>
+             <select name='as13' id='as13'> 
+              <option selected='selected'>
+                choose category for cost adding</option>
+             </select>
+            </div><!--fieldcontain-->
+            <form name='afrm12'>
+             <input type='number' name='ai121' id='ai121' required
+                placeholder='feel cost to add'/>           
+            </form>
+           </div><!--ad126-->
+           <div id='ad127'>
+              <input type='button' value='items list' id='ab122'/>
+            </div>
+            <div id='ad121' class='ac11'></div>
+            <div id='ad122' class='ac11'></div>
+            <div id='ad124' class='ac11'></div>
+            <div id='ad125' class='ac11'></div>
+          
+            <div id='ad123'>
+              <input type='button' value='add cost' id='ab121'/>
+            </div>
+         </div><!--co-->
+          <a data-role='button'
+             href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' id='aa121'>back</a>
+      </div><!--pop12-->
+      <div data-role="popup" id="ad13">
+         <div data-role="header" id='ad130' class='ac12' >
+            <h2>ad13</h2>
+             <a data-rel='back' id='aa132' data-role='button'>back</a>
+         </div>
+         <div data-role="main" class="ui-content">
+                  
+            <div id='ad131' class='ac11'></div>
+            <div id='ad132' class='ac11'></div>
+      
+            <div id='ad133'>
+              <input type='button' value='reset costs' id='ab131'/>
+            </div>
+         </div><!--co-->
+          <a data-role='button'
+             href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' id='aa131'>back</a>
+      </div><!--pop13-->
+     </div><!--content-->
+
+     <div data-role="footer" data-theme="a">
+           Author:
+         <a href="http://hit.abelski.com"  itemprop="url" data-role='button' 
+            class="ui-btn ui-btn-corner-all" data-corners="true"  
+            data-theme="b" data-shadow="true">
+           <span itemprop="name">
+              &copy; Alex Perlov,professional cours Html5 for Android
+           </span> 
+          </a>
+     </div><!--footer-->	
+   </div><!--home-->
+
+  <p>aaaaaa</p>
+  <p>aaaaaa</p>
+  <p>aaaaaa</p>
+  <p>aaaaaa</p>
+  <p>aaaaaa</p>
+  <p>aaaaaa</p>
+  <p>aaaaaa</p>
+  <p>aaaaaa</p>
+  <p>aaaaaa</p>
+  <p>aaaaaa</p>
+  <p>aaaaaa</p>
+  </body>
+</html>

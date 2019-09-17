@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<title>g1</title>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+<script src="jquery-2.1.4.js"></script>
+<script src="jquery.mobile-1.4.5.js"></script>
+<script src="mg.js"></script>
+<style>
+html{width:620px;}
+.ui-mobile [data-role=page],
+.ui-mobile [data-role=popup],
+.ui-mobile [data-role=dialog],
+ .ui-page 
+{ 
+top: 0; 
+left: 0; 
+width: 100%; 
+min-height: 100%;
+}
+.ac11 { font-weight:bold;}
+
+.ui-popup-container
+ {
+    width:100%;
+    height: 100%;
+ }
+
+.rc01{position:absolute;top: 17px;left: 19px;}
+.rc02{position:absolute;top: 17px;left: 99px;}
+.rc03{position:absolute;top: 17px;left:179px;}
+.rc04{position:absolute;top: 17px;left:259px;}
+
+.rc05{position:absolute;top: 97px;left: 19px;}
+.rc06{position:absolute;top: 97px;left: 99px;}
+.rc07{position:absolute;top: 97px;left:179px;}
+.rc08{position:absolute;top: 97px;left:259px;}
+
+.rc09{position:absolute;top:177px;left: 19px;}
+.rc10{position:absolute;top:177px;left: 99px;}
+.rc11{position:absolute;top:177px;left:179px;}
+.rc12{position:absolute;top:177px;left:259px;}
+
+.rc13{position:absolute;top:257px;left: 19px;}
+.rc14{position:absolute;top:257px;left: 99px;}
+.rc15{position:absolute;top:257px;left:179px;}
+.rc16{position:absolute;top:257px;left:259px;}
+
+.active {
+    opacity: 0.01;
+  }
+.inside {
+    opacity: 0.01;
+  }
+  .fieldset1 {
+      background-color: rgba(100, 125, 100, 0.26);
+      border-radius: 0.3em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+  }
+  .fieldset1 legend {
+      background-color: rgba(125, 125, 100 , 0.8);
+      color: white;
+      font-weight: bold;
+      font-size: 1.1em;
+      width: 17em;
+      border-radius: 0.3em;
+      padding: 0.3em;
+      text-align: center;
+  }
+ </style>
+ 
+</head>
+<body>
+
+ <div data-role="page" id="home">
+    <div data-role="header"><h3>JQM: Mobile first</h3></div>
+    <div data-role="content">
+        <fieldset class="fieldset1">
+            <legend>Check IQ under a Stress</legend>
+             <h4 style="margin-left: 3em;">Try to minimize time(seconds) for minimum touches</h4>
+             
+    <a href="#a103" data-rel="popup"  data-transition="slide" 
+       data-role='button'   id='ad001' data-inline='true'
+       data-ajax='true' style="margin: 0 3em 0 3em">open the Game</a>
+    <!--data-ajax='true' onclick='a301();'>start</a>-->
+   <label for='ai17'></label>
+   &nbsp;&nbsp;<input type='text' id='ai17' name='ai17' 
+      size="50" style="width:80vw;width-min:300px;" class='ac11'
+      placeholder='result=206-seconds-touchs'/>&nbsp;&nbsp;
+        </fieldset>
+
+
+   <div data-role="popup" id="a103">
+          <div data-role="header" id='a113' >
+            <h2>try on mobile</h2>
+          </div>
+          <div data-role="main" class="ui-content">
+
+             <p id='time'></p>
+            <h4 style="background-color: rgba(125,125,100,0.8); color:white;border-radius:0.3em;padding: 0.3em; width: 26em;text-align:center;">
+                for Result click button <span style="color:yellow;"> end & check out</span> bellow</h4>
+            <div id='a203' style='width:320px;height:330px;
+                 position:relative;'>
+
+              <div id='a501'></div>
+              <div id='a502'></div>
+              <div id='a503'></div>
+              <div id='a504'></div>
+              <div id='a505'></div>
+              <div id='a506'></div>
+              <div id='a507'></div>
+              <div id='a508'></div>
+              <div id='a509'></div>
+              <div id='a510'></div>            
+              <div id='a511'></div>
+              <div id='a512'></div>
+              <div id='a513'></div>
+              <div id='a514'></div>
+              <div id='a515'></div>
+              <div id='a516'></div>
+
+            </div>
+
+          <a href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true'  id='ad1031'>
+             end & check out</a>
+<!--onclick='a309();' >end and check out</a> -->
+          </div>     
+      </div><!--pop103-->
+
+
+    </div><!--cont-->
+ </div><!--home-->
+
+<div class='ac11'>
+<p>memory game</p>
+<p>memory game</p>
+<p>memory game</p>
+<p>memory game</p>
+<p>memory game</p>
+</div>
+
+
+</body>
+</html>

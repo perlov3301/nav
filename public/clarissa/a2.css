@@ -1,0 +1,29 @@
+html {
+    width: 90%;
+    margin: 0 auto 0 auto;
+}
+body {
+    background: rgba(100, 125, 100, 0.3);
+}
+h1, h2, h3 {
+    text-align: center;
+}
+fieldset  {
+    border: 1 blueviolet solid;
+    border-radius: 0.5em;
+}
+fieldset legend {
+    background: rgb(125,125,100);
+    color: white;
+    border: 1 blueviolet solid;
+    border-radius: 0.3em;
+}
+
+input {
+    border-radius: 0.3em;
+}
+select {
+    font-size: 1.1rem;
+    padding: 1px 5px;
+    font-weight: bold;
+}

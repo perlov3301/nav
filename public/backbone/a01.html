@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"
+          href="./a01/jq_jqm/jquery.mobile-1.4.5.min.css" />
+    <link href="./a01/acss.css" rel="stylesheet"
+          type="text/css"/>
+    <script type="text/javascript"
+            src="./a01/jq_jqm/jquery-2.1.4.min.js">
+    </script>
+    <script type="text/javascript"
+            src="./a01/jq_jqm/jquery.mobile-1.4.5.min.js">
+    </script>
+    <script type="text/javascript" src="./a01/underscore.js"></script>
+    <script type="text/javascript" src="./a01/backbone.js"></script>
+    <script type="text/javascript" src="./a01/a02.js"></script>
+</head>
+<body>
+<div data-role="page" id="id1000">
+    <div  data-role="header">
+        <h1><img src="./a01/z1.jpg" width="100">Backbone Training </h1>
+        <a href="/" data-role="button" class="back1" data-ajax="false">
+            back to Browser</a>
+    </div>
+    <div data-role="content">
+        <ul data-role="listview" data-inset="true"
+            data-theme="c" data-dividertheme="a"id="aul1">
+            <li><a href="#id1100" id="id1011">hello Backbone</a></li>
+            <li><a href="#id1200" id="id1012">change atributes
+                of Student Model </a></li>
+            <li><a href="#id1300" id="id1015">handling Bank Account &#8470;1
+                through functions within  the Model</a></li>
+            <li><a href="#id1400" id="id1018" class="goin">
+                Bank Account &#8470;2 with
+                attributes getting through ajax based HTTP request </a></li>
+        </ul>
+        <div id="id1013" >
+            <ul id="id1014" aria-label="Student Model">
+
+            </ul>
+        </div>
+        <div id="id1016" >
+            <ul id="id1017" aria-label="Bank Account &#8470;1">
+
+            </ul>
+        </div>
+        <div id="id1019" >
+            <ul id="id1020" aria-label="Bank Account &#8470;2 via Ajax">
+
+            </ul>
+        </div>
+
+    </div>
+</div><!--home-->
+<div data-role="page" id="id1100">
+    <div data-role="header">
+        <h3>
+            <a href="/" data-role="button">back to ..</a>
+        </h3>
+        <a data-rel="back">back</a>
+    </div>
+    <div data-role="content">
+        <div id="id1101">
+            <!--This document displays Backbone.js 
+                 implementation-->
+        </div>
+        <div id="id1102">
+            <ul  aria-label="Backbone implementation" id="id11021">
+                <li>
+                    "Models are the heart of any JavaScript application,
+                    containing the interactive data as well as a large part
+                    of the logic surrounding it: conversions,
+                    validations, computed properties, and access control"(Backbone.js)
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div><!--id1100-->
+<div data-role="page" id="id1200">
+    <div data-role="header">
+        <h3>
+            <a href="/" data-role="button">back to ..</a>
+        </h3>
+        <a data-rel="back">back</a>
+    </div>
+    <div data-role="content">
+        <div id="id1201"  style="background-color: #005599 ">
+
+        </div>
+        <br/>
+        <div id="id1202">
+            <form>
+                <fieldset>
+                    <legend>change the Student Model</legend>
+                    <table>
+                        <tr>
+                            <td>name</td>
+                            <td><input type="text" id="id12021"/></td>
+                        </tr>
+                        <tr>
+                            <td>id</td>
+                            <td><input type="text" id="id12022"/></td>
+                        </tr>
+                        <tr>
+                        <td>average</td>
+                        <td><input type="text" id="id12026"/></td>
+                        </tr>
+                        <tr>
+                            <td>add attribute</td>
+                            <td><input type="text" id="id12024"
+                                       placeholder="key_name"/></td>
+                            <td><input type="text" id="id12025"
+                                       placeholder="value"/></td>
+                        </tr>
+                    </table>
+                    <!--<input type="submit" value="submit" id="id12023"/>-->
+                </fieldset>
+
+                <input type="button" value="submit" id="id12023"/>
+            </form>
+
+        </div>
+        <div id="id1203"></div>
+
+        <a href="#id1204" data-rel="popup"  data-transition="slide"
+           class="ui-btn  ui-btn-inline"
+           data-ajax='true' >see data of Student</a>
+
+
+        <div data-role="popup" id="id1204">
+            <div data-role="header">
+                <h2>data</h2>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div id="id1205"  style='font-weight:bold'>
+                    <ul id="id12051">
+
+                    </ul>
+                </div>
+                <a href="#" class="ui-btn ui-corner-all
+               ui-shadow ui-btn-inline  ui-icon-back
+               ui-btn-icon-left" data-rel="back"
+                   data-ajax='true'>Go Back</a>
+            </div>  <!--main-->
+        </div><!--pop a101-->
+    </div>
+</div><!--id1200-->
+
+<div data-role="page" id="id1300">
+    <div data-role="header">
+        <h3>
+            <a href="/" data-role="button">back to ..</a>
+        </h3>
+        <a data-rel="back">back</a>
+    </div>
+    <div data-role="content">
+        <div id="id1301"  style="background-color: #005599 ">
+
+        </div>
+        <br/>
+        <div id="id1302">
+            <form>
+                <fieldset style="border: solid blue ;border-radius: 5px">
+                    <legend>handle Bank Acount of Yours </legend>
+                    <table>
+                        <tr>
+                            <td>credit</td>
+                            <td><input type="text" id="id13021" step="any"/></td>
+                        </tr>
+                        <tr>
+                            <td>deposit</td>
+                            <td><input type="number" id="id13022"
+                            step="any" /></td>
+                        </tr>
+                        <tr>
+                            <td>withdraw</td>
+                            <td><input type="number" id="id13026"
+                             step="any"/></td>
+                        </tr>
+
+                    </table>
+                    <!--<input type="submit" value="submit" id="id12023"/>-->
+                </fieldset>
+
+                <input type="button" value="submit" id="id13023"/>
+            </form>
+
+        </div>
+        <div id="id1303">
+
+        </div>
+        <div id="id1304"></div>
+        <div id="id1305"></div>
+    </div>
+</div><!--id1300-->
+<div data-role="page" id="id1400">
+    <div data-role="header">
+        <h3>
+            <a href="/" data-role="button">back to ..</a>
+        </h3>
+        <a data-rel="back">back</a>
+    </div>
+    <div data-role="content">
+        <div id="id1401"  style="background-color: #005599 ">
+
+        </div>
+        <br/>
+        <div id="id1402">
+            <br/>
+            <form>
+            </form>
+            <fieldset style="border: solid blue ;border-radius: 5px">
+                <legend>choose account via its id</legend>
+                <table>
+                    <tr>
+                        <td>enter number</td>
+                        <td><input type="number" step="any" id="id14061"
+                                   placeholder="123,124 or 125"/>
+                        </td>
+                        <td>
+                            <input type="button" value="get" id="id14062"/>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <a href="#id1408" data-rel="popup"  data-transition="slide"
+               class="ui-btn ui-corner-all  ui-btn-inline
+                ui-icon-arrow-r  ui-btn-icon-right"
+               data-ajax='true' >see data of Account &#8470;2</a>
+
+
+            <div data-role="popup" id="id1408">
+                <div data-role="header">
+                    <h3>Account &#8470;2 </h3>
+                </div>
+                <div data-role="main" class="ui-content">
+                    <div id="id1407"  style='font-weight:bold'>
+                        <ul id="id14071">
+
+                        </ul>
+                    </div>
+                    <a href="#" class="ui-btn ui-corner-all
+               ui-shadow ui-btn-inline  ui-icon-back
+               ui-btn-icon-left" data-rel="back"
+                       data-ajax='true'>Go Back</a>
+                </div>  <!--main-->
+            </div><!--pop a101-->
+
+            <div data-role="popup" id="id14082" class="starthidden">
+                <div data-role="header">
+                    <h3>Account &#8470;2 </h3>
+                </div>
+                <div data-role="main" class="ui-content">
+                    <div id="id140821"  style='font-weight:bold'>
+
+                    </div>
+                    <!--<div id="id140822"  style='font-weight:bold'>-->
+
+                    <!--</div>-->
+                    <a href="#" class="ui-btn ui-corner-all
+               ui-shadow ui-btn-inline  ui-icon-back
+               ui-btn-icon-left" data-rel="back"
+                       data-ajax='true'>Go Back</a>
+                </div>  <!--main-->
+            </div><!--pop a101-->
+
+            <form>
+                <fieldset style="border: solid blue ;border-radius: 5px">
+                    <legend>handle Bank Acount &#8470;2 of Yours </legend>
+                    <table>
+                        <tr>
+                            <td>credit</td>
+                            <td><input type="text" id="id14021" step="any"/></td>
+                        </tr>
+                        <tr>
+                            <td>deposit</td>
+                            <td><input type="number" id="id14022"
+                                       step="any" /></td>
+                        </tr>
+                        <tr>
+                            <td>withdraw</td>
+                            <td><input type="number" id="id14026"
+                                       step="any"/></td>
+                        </tr>
+
+                    </table>
+                    <!--<input type="submit" value="submit" id="id12023"/>-->
+                    <input type="button" value="submit" id="id14023"/>
+                </fieldset>
+
+                <!--<input type="button" value="submit" id="id14023"/>-->
+            </form>
+
+        </div>
+        <div id="id1403">
+
+        </div>
+        <div id="id1404"></div>
+        <div id="id1405"></div>
+    </div>
+</div><!--id1400-->
+
+</body>
+</html>

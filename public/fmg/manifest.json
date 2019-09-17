@@ -1,0 +1,12 @@
+﻿{
+ "name": "game extension",
+ "version": "1.0",
+ "manifest_version": 2,
+ "description": "This ext will memory game ", 
+ "browser_action":
+   {
+    "icons": ["aic19e.png"],
+    "default_icon": "aic19e.png",
+    "default_popup": "mg.html"
+   }
+}

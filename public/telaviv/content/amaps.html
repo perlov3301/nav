@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+<title>jQuery UI Tooltip - Custom content</title>
+	
+<link rel="stylesheet" href="jquery.ui.all.css">
+	
+<script src="jquery-2.1.4.min.js"></script>
+	
+<script src="jquery.ui.core.js"></script>
+	
+<script src="jquery.ui.widget.js"></script>
+	
+<script src="jquery.ui.position.js"></script>
+	
+<script src="jquery.ui.tooltip.js"></script>
+	
+<link rel="stylesheet" href="demos.css">
+	
+<style>
+	
+.photo {
+		width: 300px;
+		text-align: center;
+	}
+	
+.photo .ui-widget-header {
+		margin: 1em 0;
+	}
+	
+.map {
+		width: 350px;
+		height: 350px;
+	}
+	
+.ui-tooltip {
+		max-width: 350px;
+	}
+	
+</style>
+	
+<script>
+	
+$(function() {
+		
+$( document ).tooltip({
+			
+    items: "img, [data-geo], [title]",
+			
+    content: function() 
+      {
+				
+        var element = $( this );
+				
+        if ( element.is( "[data-geo]" ) )
+         {
+					
+           var text = element.text();
+					
+           return "<img class='map' alt='" + text +
+						
+              "' src='http://maps.google.com/maps/api/staticmap?" +
+						
+              "zoom=17&size=350x350&maptype=terrain&sensor=false&center=" +
+			
+              text + "'>";
+		
+         }
+				
+       if ( element.is( "[title]" ) ) 
+         {
+					
+           return element.attr( "title" );
+			
+    	}
+				
+           if ( element.is( "img" ) ) {
+	return element.attr( "alt" );
+}
+		
+     }
+		
+    });
+
+ });
+	
+</script>
+
+</head>
+
+<body>
+
+
+
+<div>
+  <div align="left" class="ui-widget photo">
+	
+    <div class="ui-widget-header ui-corner-all">
+	
+    </div>
+
+    <a href="https://en.wikipedia.org/wiki/Kikar_Hamedina">
+		
+    <img align="left" src="images/Hamedina.jpg" alt="Hamedina" class="ui-corner-all">
+	
+    </a>					
+
+  </div>
+
+
+  <h1 ><a href="http://maps.google.com/maps?q=telaviv,+israel&amp;z=11" 
+  data-geo>Kikar HaMedina, Hei be-Iyar Street, Tel Aviv-Yafo, Israel</a>
+</h1>
+
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<div>
+  <div align="left" class="ui-widget photo">
+	
+    <div class="ui-widget-header ui-corner-all">
+
+    </div>
+
+    <a href="https://en.wikipedia.org/wiki/Tel_Aviv_City_Hall">
+		
+     <img align="left" src="images/CityHall.jpg" alt="city hall" class="ui-corner-all">
+
+    </a>
+
+
+ </div>		
+  <h1 >
+  <a href="http://maps.google.com/maps?q=telaviv,+israel&amp;z=17" data-geo>city hall,telaviv</a>
+  </h1>
+			
+</div>	
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div>
+  <div align="left" class="ui-widget photo">
+	
+    <div class="ui-widget-header ui-corner-all">
+    </div>
+	
+    <a href="https://en.wikipedia.org/wiki/Dizengoff_Square">
+		
+    <img align="left" src="images/diezengoff.jpg" alt="diezengoff" class="ui-corner-all">
+
+    </a>
+	
+  </div>
+
+
+  <h1><a href="http://maps.google.com/maps?q=telaviv,+israel&amp;z=17" data-geo>kikar diezengoff,telaviv</a></h1>
+			
+
+</div>	
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div>
+  <div align="left" class="ui-widget photo">
+	
+    <div class="ui-widget-header ui-corner-all">
+    </div>
+	
+    <a href="https://en.wikipedia.org/wiki/Tel_Aviv_Museum_of_Art">
+		
+    <img align="left" src="images/Museum.jpg" alt="museum" class="ui-corner-all">
+
+    </a>
+	
+  </div>
+
+
+  <h1><a href="http://maps.google.com/maps?q=telaviv,+israel&amp;z=17" data-geo>Tel Aviv Museum of Art</a></h1>
+			
+
+</div>	
+
+
+
+
+
+<div class="demo-description">
+
+<p>Shows how to combine different event delegated tooltips into a single instance, 
+by customizing the items and content options.</p>
+
+<p>We realize you may want to interact with the map tooltips. 
+This is a planned feature for a future version.</p>
+
+</div>
+
+</body>
+
+</html>

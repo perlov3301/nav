@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>conv</title>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+<script src="jquery-2.1.4.min.js"></script>
+<script src="jquery.mobile-1.4.5.min.js"></script>
+<script src="converext.js"></script>
+
+<style type='text/css'>
+html{width:370px;height:420px;}
+label{float:left;}
+.ac11 { font-weight:bold;}
+
+.ui-mobile [data-role=page],
+.ui-mobile [data-role=popup],
+.ui-mobile [data-role=dialog],
+ .ui-page 
+{ 
+top: 0; 
+left: 0; 
+width: 100%; 
+min-height: 100%;
+}
+.ui-popup-container
+ {
+    width:100%;
+    height: 100%;
+ }
+p{font-weight:bold;}
+</style>
+</head>
+
+<body>
+ <div data-role="page" id="home">
+  <div data-role="header"><h1>Converter8</h1></div><!--he-->
+  <div data-role="content">
+    <p>This is the home page.</p>
+    <p>For more information click 'about'</p>
+    <p>For point to list of convertors click 'search'</p>
+    <p><a href="#about" data-transition='slide'
+          data-role='button' data-ajax='true'>
+           about</a></p>
+       <a href="#opt3" data-transition='slide'
+          data-role='button' data-ajax='true'>
+          search</a>
+  </div><!-- /content -->
+ </div><!--ho-->
+
+ <div data-role="page" id="about">
+  <div data-role="header"><h1>about converter</h1>
+   <a class="ui-btn ui-icon-back ui-btn-icon-left" 
+      data-rel='back' data-role='button'>
+     back</a>
+  </div><!--he-->
+  <div data-role="content">
+    <p>Your can convert a number to a number of another unit:</p>
+    <p>
+     mile<span style="font-weight:bold;font-size:150%">&harr;</span>km
+        &nbsp; or &nbsp;
+     inch<span style="font-weight:bold;font-size:150%">&harr;</span>cm
+        &nbsp; or &nbsp;
+     °F<span style="font-weight:bold;font-size:150%"> &harr;</span>°C 
+    </p>
+    <p>Your can search convertor by click 'search'</p>    
+    </p><a href="#home" data-transition='slide'
+          data-role='button' data-ajax='true'>
+          Home</a>
+    <a href="#opt3" data-transition='slide'
+          data-role='button' data-ajax='true'>
+          Search</a>
+         
+  </div><!--content-->
+ </div><!--ab-->
+
+ <div data-role="page" id="opt3">
+  <div data-role="header"><h1>searching</h1>
+   <a class="ui-btn ui-icon-back ui-btn-icon-left" 
+      data-rel='back' data-role='button'>back</a>
+  </div><!--he-->
+  <div data-role="content">
+    <p>make your way to another unit:</p>
+
+      <a href="#a501" data-role='button' 
+          data-transition='slide'>
+         mile<span style="font-weight:bold;font-size:150%">&harr;</span>km
+      </a>
+      <a href="#a521" data-role='button' 
+          data-transition='slide'>
+         inch<span style="font-weight:bold;font-size:150%">&harr;</span>cm
+      </a>	
+      <a href="#a541" data-role='button' 
+          data-transition='slide'>
+         °F<span style="font-weight:bold;font-size:150%">&harr;</span>°C
+      </a>
+  </div><!--content-->
+ </div><!--se-->
+
+ <div data-role="page" id="a501">
+  <div data-role="header"><h1>
+    mile<span style="font-weight:bold;font-size:150%">&harr;</span>km
+   </h1>
+   <a class="ui-btn ui-icon-back ui-btn-icon-left" 
+       data-rel='back' data-role='button'>back</a>
+  </div><!--he-->
+  <div data-role="content">
+    <p>Enter number in one of the fields, <wbr>
+       <wbr>then press the "calculate" button</p>
+
+    <form name="b1">
+      <label  for='a310'>mile</label> 
+      <input type="number" name="a310" id='a310' min='0' 
+              step='any'  placeholder="mile"/>
+
+      <input type="button" value="calculate" id='a203'/>
+
+      <label  for='a320'>km</label>
+      <input type="number" name="a320" id='a320' min='0' 
+              step='any'  placeholder="km"/>
+      <br/>
+      <input type="reset" value="reset"  />
+    </form>
+
+  </div><!-- /content -->
+ </div><!--501-->
+
+ <div data-role="page" id="a521">
+  <div data-role="header">
+   <h1>
+    inch<span style="font-weight:bold;font-size:150%">&harr;</span>cm
+   </h1>
+   <a class="ui-btn ui-icon-back ui-btn-icon-left" 
+      data-rel='back' data-role='button'>back</a>
+  </div><!--he-->
+  <div data-role="content">
+    <p>Enter number in one of the fields, <wbr>
+       <wbr>then press the "calculate" button</p>
+
+    <form name="b2">
+      <label  for='a330'>inch</label> 
+      <input type="number" name="a330" id="a330" min="0" 
+              step='any'  placeholder="inch"/>
+
+      <input type="button" value="calculate" id='a223' />
+
+      <label  for='a340'>cm</label>
+      <input type="number" name="a340" id='a340' min='0' 
+              step='any'  placeholder="cm"/>
+      <br/>
+      <input type="reset" value="reset"  />
+    </form>
+
+  </div><!-- /content -->
+ </div><!-- page521 -->
+
+ <div data-role="page" id="a541">
+  <div data-role="header">
+   <h1>
+    °C<span style="font-weight:bold;font-size:150%">&harr;</span>°F
+   </h1>
+   <a class="ui-btn ui-icon-back ui-btn-icon-left" 
+      data-rel='back' data-role='button'>back</a>
+  </div><!--header-->
+  <div data-role="content">
+    <p>Enter number in one of the fields, </p>
+    <p>then press the "calculate" button</p>
+      
+    <form name="b3">
+      <label  for='a350'>°C</label> 
+      <input type="number" name="a350" id="a350" 
+              step='any'  placeholder="°C"/>
+
+      <input type="button" value="calculate" id='a243' />
+
+      <label  for='a360'>°F</label>
+      <input type="number" name="a360" id='a360'  
+              step='any'  placeholder="°F"/>
+      <br/>
+      <input type="reset" value="reset"  />
+    </form>
+
+  </div><!-- /content -->
+ </div><!-- page541 -->
+
+<div id='ad001'>
+<p class='ac11'>converter</p>
+<p class='ac11'>converter</p>
+<p class='ac11'>converter</p>
+<p class='ac11'>converter</p>
+<p class='ac11'>converter</p>
+<p class='ac11'>converter</p>
+<p class='ac11'>converter</p>
+</div><!--hide?-->
+</body>
+</html>

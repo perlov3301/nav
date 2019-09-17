@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<title>ol32</title>
+ <meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0,
+ user-scalable=no" />
+<script type="text/javascript" src="log4javascript_lite.js">
+</script>
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css"/>
+<link rel="stylesheet" href="bs/css/bootstrap.min.css"/>
+<link rel="stylesheet" 
+   href="bs/css/bootstrap-responsive.min.css"/>
+
+<link rel="stylesheet" href="bs/css/layout.css"/>
+
+<link rel="stylesheet" href="ol.css" />
+
+
+<script type="text/javascript" src="jquery-2.1.4.min.js">
+</script>
+
+<script type="text/javascript" src="jquery.mobile-1.4.5.min.js">
+</script>
+<script type="text/javascript" src="bs/js/bootstrap.min.js">
+</script>
+<!--
+  <script type="text/javascript"
+ src="https://maps.googleapis.com/maps/api/js?
+key=AIzaSyB_ZSdzmuDdhVLlTNypKYS7tuG_xns6IVU&sensor=false">
+ </script>
+-->
+<script type="text/javascript" src="a3ge6m.js"></script>
+
+<style type='text/css'>
+.ac11 { font-weight:bold;}
+.amap {
+        height: 400px;
+        width: 400px;
+      }
+#a0map,#a9map,#a10map {
+ height: 400px;
+ width: 400px;
+ }
+ 
+#marker {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #088;
+  border-radius: 10px;
+  background-color: #0FF;
+  opacity: 0.5;
+}
+
+html,body{width:450px;}
+.ui-mobile [data-role=page],
+.ui-mobile [data-role=popup],
+.ui-mobile [data-role=dialog],
+.ui-page 
+.ui-popup-container
+{ 
+top: 0; 
+left: 0; 
+width: 100%; 
+min-height:100%;
+}
+</style>
+
+</head>
+<body>
+ <script type="text/javascript" src="ol.js"></script>
+<!--
+  <script  type="text/javascript"
+    src="http://openlayers.org/en/v3.0.0/build/ol.js" >
+  </script>
+-->
+  <div data-role="page" id="home">
+    <div data-role="header"> ol3</div>
+
+    <div data-role="content">
+      <a data-role='button'
+         href="#ad09" data-rel="popup"  data-transition="slide" 
+         class="ui-btn  ui-btn-inline"  data-position-to='window'
+         data-ajax='true' id='aa001'>ad09 sample of ol Map
+      </a>
+     
+      <a data-role='button'
+         href="#ad10" data-rel="popup"  data-transition="slide" 
+         class="ui-btn  ui-btn-inline"  data-position-to='window'
+         data-ajax='true' id='aa002'>ad10 ol Map geolocation
+      </a>
+      
+      <div class="container-fluid">
+
+
+              <div class="row-fluid">
+
+                <div class="span12">
+
+                  <div id="a0map" class="map">
+                  </div>
+
+                </div><!--span-->
+              </div><!--row-->
+            </div>
+<!--cont-->     
+ 
+      <div data-role="popup" id="ad09">
+         <div data-role="header"  >
+            <a data-role='button'
+              href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' id='aa091'>back
+            </a>
+            <h3>ad09 </h3>
+         </div><!--he-->
+         <div data-role="main" class="ui-content">
+            <div class="container-fluid">
+
+
+              <div class="row-fluid">
+
+                <div class="span12">
+
+                  <div id="a9map" class="map">
+                  </div>
+
+                </div><!--span-->
+              </div><!--row-->
+            </div>
+<!--cont-->
+          </div><!--main-->
+      </div><!--pop09-->
+ 
+      <div data-role="popup" id="ad10">
+         <div data-role="header"  >
+            <a data-role='button'
+             href="#" class="ui-btn ui-corner-all ui-shadow 
+             ui-btn-inline ui-icon-back ui-btn-icon-left" 
+             data-rel="back" data-ajax='true' id='aa101'>back
+            </a>
+            <h3>ad10 </h3>
+         </div><!--he-->
+         <div data-role="main" class="ui-content">
+           <div id='ad102' class='ac11'></div>
+           <br>
+           <div id='ad103' >
+             <a data-role='button'
+                href="#" class="ui-btn ui-corner-all ui-shadow 
+                ui-btn-icon-left" data-icon="search"
+                data-role="button" data-ajax='true' id='aa102'>
+                to show your geolocation 
+            </a>
+           </div>
+            <div class="container-fluid">
+
+
+
+              <div class="row-fluid">
+
+                <div class="span12">
+
+                  <div id="a10map" class="map">
+                  </div>
+
+                </div><!--span-->
+              </div><!--row-->
+              <div style="display: none;">
+  <!-- Clickable  Vienna -->
+  <a class="overlay" id="vienna" target="_blank" 
+    href="http://en.wikipedia.org/wiki/Vienna">Vienna</a>
+  <div id="marker" title="here Marker"></div>
+  <!-- Popup -->
+  <div id="popup" title="Welcome to ol3"></div>
+</div>
+            </div>
+<!--cont-->
+          </div><!--main-->
+      </div><!--pop10-->
+<p></p>
+   </div><!--cont-->
+</div><!--home-->
+
+</body>
+</html>

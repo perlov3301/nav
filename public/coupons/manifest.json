@@ -1,0 +1,18 @@
+{
+ "name": "coupons bs carousel",
+ "version": "1.0",
+ "manifest_version": 2,
+ "description": "This coupons extension shows carousel from bs ", 
+ "browser_action":
+   {
+    "icons": ["aic19j.png"],
+    "default_icon": "aic19j.png",
+    "default_popup": "carousel10.html"
+   },
+  "permissions": [
+    "https://www.couponnetwork.fr/*",
+    "https://*/*",
+    "http://*/*",
+    "geolocation"
+]
+}

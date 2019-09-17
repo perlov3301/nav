@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="tools1/m3.ico"/>
+  <title>training</title>
+
+  <link rel="stylesheet" href="tools1/jquery.mobile-1.4.5.min.css">
+  <link href="tools1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="tools1/jquery-2.1.4.min.js"></script>
+  <script src="tools1/jquery.mobile-1.4.5.min.js"></script>
+  <script src="converext.js"></script>
+
+  <style type='text/css'>
+    html{width:94%;height:auto;}
+    .ui-mobile [data-role=page],
+    .ui-mobile [data-role=popup],
+    .ui-mobile [data-role=dialog],
+    .ui-page
+    {
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+    .ui-popup-container
+    {
+      width:100%;
+      height: 100%;
+    }
+    p{font-weight:bold;}
+    label{float:left;font-weight:bold;}
+    input{font-weight:bold;}
+    .ac11 { font-weight:bold;}
+    .aui
+    {
+      width: 200px;
+      text-align: left;
+    }
+    .lui
+    {
+      text-align: left;
+    }
+    .rui
+    {
+      width: 85%;
+      margin-left:3.6%;
+    }
+    span
+    {
+      font-size: 135%;
+      font-weight:bold;
+    ;}
+    .abtn
+    {
+      margin-top: 17px;
+    }
+
+    @media all  {
+      .my-breakpoint.ui-grid-b .ui-block-a { width: 33%; }
+      .my-breakpoint.ui-grid-b .ui-block-b { width: 33%; }
+      .my-breakpoint.ui-grid-b .ui-block-c { width: 33%; }
+    }
+    .background1 {
+      background: url(tools1/background.jpg) no-repeat center center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div data-role="page" id="opt3" style="width:100%;height:auto;">
+  <div data-role="header">
+    <!--<a data-role='button' data-rel='back'>Back</a>-->
+    <nav class="nav navbar-nav navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+
+      </div>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#opt3">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+        </a>
+      </div><!--navbar-header-->
+      <div class="btn-group" role="group" aria-label="..."
+           style="float:right;padding-right:1.5em;">
+        <button type="button" class="btn btn-default"
+                data-target="#home"
+                onclick="window.location.replace('#home');">
+          Home</button>
+        <button type="button" class="btn btn-default"
+                data-target="#about"
+                onclick="window.location.replace('#about');">
+          About</button>
+        <!--<a type="button" class=" page-scroll" href="#about">About</a>-->
+
+        <div class="btn-group" role="group">
+          <button type="button"
+                  class="btn btn-default dropdown-toggle"
+                  data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+            Dropdown
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#a501"
+                   class='lui ui-btn ui-btn-icon-right ui-icon-carat-r'
+                   data-transition="slide"
+                   data-position-to='window' data-ajax='true' >
+              miles<span>&harr;</span>km
+            </a>
+            </li>
+            <li>
+              <!-- -->
+              <a href="#a521"
+                 class='lui ui-btn ui-btn-icon-right ui-icon-carat-r'
+                 data-transition="slide"
+                 data-position-to='window' data-ajax='true'  >
+                inch<span>&harr;</span>cm
+              </a>
+            </li>
+            <li>
+              <a href="#a541"
+                 class='lui ui-btn ui-btn-icon-right ui-icon-carat-r'
+                 data-transition="slide"
+                 data-position-to='window' data-ajax='true'  >
+                °F<span>&harr;</span>°C
+              </a>
+            </li>
+          </ul>
+        </div><!--btn-group within btn-group-->
+      </div><!--btn-group-->
+    </nav>
+  </div><!--he-->
+  <div data-role="content">
+    <section class="bg-secondary" id="home">
+
+    </section>
+    <div class="jumbotron background1">
+      <div class="container">
+        <h1 class="display-3">Converters:data at different unit</h1>
+        <!--<p style="color:darkgreen">-->
+        <!--  comfortable application for comfortable life</p>-->
+        
+        <p style="color:green">
+          <b>request for implementation of this application 
+          for Android(.apk file) </b><br>
+          <a class="btn btn-primary btn-lg"
+             href="mailto:perlov3301@gmail.com?Subject=Send%20me%20apk" 
+             role="button" id="id1010">
+            mailto  &raquo;</a>
+            <br/>
+            <!--<a class="btn btn-primary btn-lg"-->
+            <!-- href="/tiny1.zip" role="button">-->
+            <!--Download_1 .zip  &raquo;</a>-->
+        </p>
+      </div>
+    </div>
+
+    <section class="bg-secondary" id="about" style="backgroundcolor:green;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Converter miles<span>&harr;</span>km</h2>
+            <p>Conversion milles to km and visa versa
+            <br>press the button bellow:
+              <a class="btn btn-secondary" href="#a501" role="button">
+                miles<span>&harr;</span>km&raquo;</a>
+            </p>
+          </div><!-- col4 -->
+          <div class="col-md-4">
+            <h2>Converter inch<span>&harr;</span>cm</h2>
+            <p>conversion inch into cm and visa versa
+            <br>press the button:
+              <a class="btn btn-secondary" href="#a521" role="button">
+                inch<span>&harr;</span>cm &raquo;</a></p>
+          </div><!-- col4 -->
+          <div class="col-md-4">
+            <h2>Converter °F<span>&harr;</span>°C</h2>
+            <p>conversion between temperature units
+              <br>Farenheit to Celcium and visa versa
+              <br> click the button
+            <a class="btn btn-secondary" href="#a541"
+               role="button">
+              °F<span>&harr;</span>°C &raquo;</a></p>
+          </div><!-- col4 -->
+        </div><!-- row -->
+      </div><!-- container-->
+    </section>
+      <hr>
+      <footer>
+        <p>&copy; Alex Perlov,cours Android,HIT 2016</p>
+      </footer>
+
+  </div><!--content-->
+</div><!--page_se-->
+
+<div data-role="page" id="a501" addBackBtn="true">
+  <div data-role="header" data-add-back-btn="true">
+    <!--<div data-role="page" id="a501" >-->
+      <!--<div data-role="header" >-->
+    <!--<a data-rel="back"  >&nbsp;&nbsp;Back&nbsp;&nbsp;</a>-->
+    <a  data-role='button' href="#opt3">Home</a>
+    <h2>miles<span>↔</span>km</h2>
+  </div><!--he-->
+  <div data-role="content">
+    <p>Enter positive number into one of the fields, <wbr>
+      <wbr>then press the "calcul" button</p>
+
+    <form name="b1">
+      <div class="ui-grid-b my-breakpoint">
+        <div class="ui-block-a">
+          <div class="ac11 ui-body ui-body-d">
+            <label  for='a310'>mile</label>
+            <input type="number" name="a310" id='a310' min='0'
+                   step='any'  placeholder="mile"/>
+          </div>
+        </div><!--a-->
+        <div class="ui-block-b">
+          <div class="abtn ui-btn ui-input-btn ui-shadow ui-corner-all">
+            calcul
+            <input type="button" value="calcul" data-enhanced="true"
+                   data-theme="a" data-corners="true" id='a203' >
+          </div>
+        </div><!--b-->
+        <div class="ui-block-c">
+          <div class="ac11 ui-body ui-body-d">
+            <label  for='a320'>km</label>
+            <input type="number" name="a320" id='a320' min='0'
+                   step='any'  placeholder="km"/>
+          </div>
+        </div><!--c-->
+      </div><!--gr-->
+      <div class="rui ui-btn ui-input-btn ui-shadow ui-corner-all">
+        Reset
+        <input type="reset" value="Reset" data-enhanced="true"
+               data-theme="a" data-corners="true"  >
+      </div>
+    </form>
+
+
+  </div><!-- /content -->
+</div><!--501-->
+
+<div data-role="page" id="a521">
+  <div data-role="header">
+    <!--data-rel="back"-->
+    <h2>inch<span>↔</span>cm</h2>
+    <a  data-role='button' href="#opt3">Home</a>
+  </div><!--he-->
+  <div data-role="content">
+    <p>Enter number into one of the fields, <wbr>
+      <wbr>then press the "calc" button</p>
+
+    <form name="b2">
+      <div class="ui-grid-b my-breakpoint">
+        <div class="ui-block-a">
+          <div class="ac11 ui-body ui-body-d">
+            <label  for='a330'>inch</label>
+            <input type="number" name="a330" id="a330" min='0'
+                   step='any'  placeholder="inch"/>
+          </div>
+        </div><!--a-->
+        <div class="ui-block-b">
+          <div class="abtn ui-btn ui-input-btn ui-shadow ui-corner-all">
+            calcul
+            <input type="button" value="calcul" data-enhanced="true"
+                   data-theme="a" data-corners="true" id='a223' >
+          </div>
+        </div><!--b-->
+        <div class="ui-block-c">
+          <div class="ac11 ui-body ui-body-d">
+            <label  for='a340'>cm</label>
+            <input type="number" name="a340" id='a340' min='0'
+                   step='any'  placeholder="cm"/>
+          </div>
+        </div><!--c-->
+      </div><!--gr-->
+      <div class="rui ui-btn ui-input-btn ui-shadow ui-corner-all">
+        Reset
+        <input type="reset" value="Reset" data-enhanced="true"
+               data-theme="a" data-corners="true"  >
+      </div>
+    </form>
+
+
+  </div><!-- /content -->
+</div><!-- page521 -->
+
+<div data-role="page" id="a541">
+  <div data-role="header">
+    <a  data-role='button' href="#opt3">Home</a>
+    <h2>°C<span>↔</span>°F</h2>
+    <!--<a data-rel="back" >just Back</a>-->
+  </div><!--header-->
+  <div data-role="content">
+    <div>Enter number into one of the fields,
+      then press the "calcul" button</div>
+
+    <form name="b3">
+      <div class="ui-grid-b my-breakpoint">
+        <div class="ui-block-a">
+          <div class="ac11 ui-body ui-body-d">
+            <label  for='a350'>°C</label>
+            <input type="number" name="a350" id="a350"
+                   step='any'  placeholder="°C"/>
+          </div>
+        </div><!--a-->
+        <div class="ui-block-b">
+          <div class="abtn ui-btn ui-input-btn ui-shadow ui-corner-all">
+            calcul
+            <input type="button" value="calcul" data-enhanced="true"
+                   data-theme="a" data-corners="true" id='a243' >
+          </div>
+        </div><!--b-->
+        <div class="ui-block-c">
+          <div class="ac11 ui-body ui-body-d">
+            <label  for='a360'>°F</label>
+            <input type="number" name="a360" id='a360'
+                   step='any'  placeholder="°F"/>
+          </div>
+        </div><!--c-->
+      </div><!--gr-->
+      <div class="rui ui-btn ui-input-btn ui-shadow ui-corner-all">
+        Reset
+        <input type="reset" value="Reset" data-enhanced="true"
+               data-theme="a" data-corners="true"  >
+      </div>
+    </form>
+
+  </div><!-- /content -->
+</div><!-- page541 -->
+
+<script src="tools1/tether.min.js"></script>
+<script src="tools1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cl1</title>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1"
+           name="viewport">
+        <link rel="stylesheet" href="./a2.css" />
+    </head>
+    <body>
+        <h1 style="text-align: center;">clarissa2</h1>
+        <fieldset>
+            <legend>radio</legend>
+            <form id="questions" method="post" action="" name="questions">
+                <!-- checkbox or select menu 
+                vs radio or option  -->
+                <input type="radio" name="favcolor" value="blue" 
+                  id="blue" checked>
+                <label for="blue">blue</label>
+                </br>
+                <input type="radio" name="favcolor" value="red" 
+                  id="red" >
+                <label for="red">red</label>
+                </br>
+                <input type="radio" name="favcolor" value="green" 
+                id="green" >
+                <label for="green">green</label>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>select</legend>
+            <label for="pet"> a pet</label>
+            <select id="pet" 
+              style="   font-size: 1.1rem;
+                        padding: 1px 5px;
+                        font-weight: bold;"
+            >
+                <option value=""><b>choose an option</b></option>
+                <option value="dog"><b>Dog</b></option>
+                <option value="cat"><b>Cat</b></option>
+                <option value="Hamster"><b>Hamster</b></option>
+                <option value="Parrot"><b>Parrot</b></option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Checkbox</legend>
+            <h3>Your pets</h3>
+            <div>
+                <input type="checkbox" id="dog"
+                  name="dog" >
+                <label for="dog">Dog</label></br>
+                <input type="checkbox" id="cat"
+                  name="cat" >
+                <label for="cat">Cat</label>
+                <input type="checkbox" id="parrot"
+                  name="parrot" >
+                <label for="parrot">parrot</label>
+            </div>
+        </fieldset>
+    </body>
+</html>
